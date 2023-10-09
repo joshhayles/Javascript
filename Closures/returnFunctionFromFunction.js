@@ -7,19 +7,26 @@ const createFunction = () => {
 
 const generatedFunc = createFunction();
 
-const result = generatedFunc(3);
+const result = generatedFunc();
+
+console.log(generatedFunc(4)); // 8
 
 /*
 
 line 1: 
   - declare a new constant 'createFunction' in global memory
+
   - inside createFunction, you declare a new const 'multiplyBy2', which is an inner function, with the parameter 'num' and calculate num * 2
+
   - then, you return 'multiplyBy2'
   
 line 8: 
   - declare a new constant variable 'generatedFunc' in global memory
+
   - next, Javascript encounters the function invocation createFunction() and looks for it in the current scope. When it's found, it gets executed (the code within the function is run)
+
   - the result (return value) of the function is then assigned to the constant 'generatedFunc'
+  
   - 'generatedFunc' now holds a reference to the 'multiplyBy2' function
 
 line 10:
