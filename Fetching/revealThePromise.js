@@ -1,5 +1,4 @@
-// async function returns a promise
-
+// async function returns a promise object vs the actual value
 async function getName() {
   return "Josh Hayles";
 }
@@ -7,6 +6,7 @@ async function getName() {
 console.log(getName()); // Promise { 'Josh Hayles' }
 
 async function logName() {
+  // this pauses the execution of the function and will wait for the resolution of the Promise returned by the getName() function
   const name = await getName();
   console.log(name); // Josh Hayles
 }
@@ -15,20 +15,3 @@ logName();
 
 // Promise { 'Josh Hayles' }
 // Josh Hayles
-
-
-// you can also use .then methods
-// Promise.resolve is a javascript method that returns a Promise object that's resolved with a given value. Convenient for a promise that's already resolved with a specified value
-
-function getNameTwo() {
-  return Promise.resolve("Joshua H.");
-}
-
-getNameTwo().then(nameTwo => {
-  console.log(nameTwo); // Joshua H.
-})
-
-
-// Promise { 'Josh Hayles' }
-// Josh Hayles
-// Joshua H.
