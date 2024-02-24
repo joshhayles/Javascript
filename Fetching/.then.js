@@ -2,6 +2,7 @@
 
 // Promise.resolve is a javascript method that returns a Promise object that's resolved with a given value. Convenient for a promise that's already resolved with a specified value
 
+
 function getName() {
   return Promise.resolve("Joshua H.");
 }
